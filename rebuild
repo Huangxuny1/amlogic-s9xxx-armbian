@@ -609,6 +609,8 @@ confirm_version() {
 
     # Find the kernel version that matches the custom version
     build_kernel=()
+    echo "DEBUG: model_kernel = (${#model_kernel[@]} items): ${model_kernel[@]}"
+    echo "DEBUG: latest_kernel = (${#latest_kernel[@]} items): ${latest_kernel[@]}"
     latest_kernel=(${tags_list[${conf_kernel_tags}]})
     for ck in "${model_kernel[@]}"; do
         for lk in "${latest_kernel[@]}"; do
